@@ -1,0 +1,29 @@
+import React from 'react';
+import { Canvas } from '@react-three/fiber';
+import { Suspense } from 'react';
+import Loader from '../components/Loader';
+import WhaleChestRay from '../models/WhaleChestRay';
+import { OrbitControls } from '@react-three/drei';
+
+const Home = () => {
+  return (
+    <section className='w-full h-screen relative'>
+        <Canvas 
+          className='w-full h-screen bg-transparent'
+          camera={{ near: 0.1, far: 1000 }}
+        >
+            <OrbitControls />
+            <Suspense fallback={<Loader />}>
+                    <ambientLight
+                      position={[0.0, 10.0, 0.0]}
+                      castShadow
+                      intensity={Math.PI * 2}
+                    />
+                <WhaleChestRay />
+            </Suspense>
+        </Canvas>
+    </section>
+  )
+}
+
+export default Home;
