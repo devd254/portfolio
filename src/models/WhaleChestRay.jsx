@@ -1,13 +1,16 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 import { a } from "@react-spring/three";
 
-import whaleMore from "../assets/whale_shark_cute_character.glb";
+import whaleMore from "../assets/animated_idle_whale.glb";
 
 const WhaleChestRay = (props) => {
   const whaleMoreRef = useRef();
 
-  const { nodes, materials } = useGLTF(whaleMore);
+  const { nodes, materials, animations } = useGLTF(whaleMore);
+  const { ref, mixer, names, actions, clips } = useAnimations(animations)
+
+
   return (
     <a.group ref={whaleMoreRef} {...props}>
       <group {...props} dispose={null}>

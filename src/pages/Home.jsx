@@ -1,3 +1,9 @@
+/*
+References:
+https://docs.pmnd.rs/react-three-fiber/getting-started/introduction
+https://github.com/pmndrs/drei
+*/
+
 import React from 'react';
 import { Canvas } from '@react-three/fiber';
 import { Suspense } from 'react';
