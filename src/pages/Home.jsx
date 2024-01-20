@@ -8,8 +8,11 @@ import React from 'react';
 import { Canvas } from '@react-three/fiber';
 import { Suspense } from 'react';
 import Loader from '../components/Loader';
-import SandScene from '../models/SandScene';
+
 import { OrbitControls } from '@react-three/drei';
+
+import Whale from '../models/Whale';
+import SandScene from '../models/SandScene';
 
 const Home = () => {
   return (
@@ -26,6 +29,8 @@ const Home = () => {
                       intensity={Math.PI * 2}
                     />
                 <SandScene />
+                
+                <Whale />
             </Suspense>
         </Canvas>
     </section>
