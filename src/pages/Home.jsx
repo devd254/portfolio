@@ -8,7 +8,7 @@ import React from 'react';
 import { Canvas } from '@react-three/fiber';
 import { Suspense } from 'react';
 import Loader from '../components/Loader';
-import WhaleChestRay from '../models/WhaleChestRay';
+import SandScene from '../models/SandScene';
 import { OrbitControls } from '@react-three/drei';
 
 const Home = () => {
@@ -25,7 +25,7 @@ const Home = () => {
                       castShadow
                       intensity={Math.PI * 2}
                     />
-                <WhaleChestRay />
+                <SandScene />
             </Suspense>
         </Canvas>
     </section>
