@@ -12,6 +12,7 @@ import Loader from '../components/Loader';
 import { OrbitControls } from '@react-three/drei';
 
 import Whale from '../models/Whale';
+import Ray from '../models/Ray';
 import SandScene from '../models/SandScene';
 
 const Home = () => {
@@ -29,7 +30,7 @@ const Home = () => {
                       intensity={Math.PI * 2}
                     />
                 <SandScene />
-                
+                <Ray />
                 <Whale />
             </Suspense>
         </Canvas>
