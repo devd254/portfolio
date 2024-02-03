@@ -11,15 +11,23 @@ const Whale = () => {
         return () => actions[names[0]]
     }, [actions, names])
 
-    function animate(time) {
-        scene.rotation.z += 0.001;
+    const origin = 20;
+
+    function animate() {
+        console.log(scene.position.x);
+        if(scene.position.x <= -200.1){
+            scene.position.x = origin;
+        }
+        scene.position.x += -0.07;
         requestAnimationFrame(animate);
     }
     requestAnimationFrame(animate);
+
     return(
         <group ref={ref} dispose={null}>
-            <mesh position={[-10, 20, 1]}
-                  scale={[2.3, 2.3, 2.3]}
+            <mesh 
+                scale={[2.3, 2.3, 2.3]}
+                position={[-10, 20, 1]}
             >
                 <primitive object={scene} />
             </mesh>
