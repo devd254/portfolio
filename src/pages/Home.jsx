@@ -7,15 +7,17 @@ https://github.com/pmndrs/drei
 import React from 'react';
 import { Canvas } from '@react-three/fiber';
 import { Suspense } from 'react';
-import Loader from '../components/Loader';
+import { Transition } from '@headlessui/react';
 
 import { OrbitControls } from '@react-three/drei';
 
+import Loader from '../components/Loader';
 import Whale from '../models/Whale';
 import Ray from '../models/Ray';
 import SandScene from '../models/SandScene';
 
-const Home = () => {
+const Home = ({ isOpen }) => {
+
   return (
     <section className='w-full h-screen relative'>
         <Canvas 
@@ -24,14 +26,14 @@ const Home = () => {
         >
             <OrbitControls />
             <Suspense fallback={<Loader />}>
-                    <ambientLight
-                      position={[0.0, 10.0, 0.0]}
-                      castShadow
-                      intensity={Math.PI * 2}
-                    />
-                <SandScene />
-                <Ray />
-                <Whale />
+              <ambientLight
+                position={[0.0, 10.0, 0.0]}
+                castShadow
+                intensity={Math.PI * 2}
+              />
+              <SandScene />
+              <Ray />
+              <Whale />
             </Suspense>
         </Canvas>
     </section>

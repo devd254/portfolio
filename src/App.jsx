@@ -1,6 +1,6 @@
 import React from "react"
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-
+import { TransitionGroup, CSSTransition } from 'react-transition-group'
 
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
@@ -14,12 +14,21 @@ const App = () => {
      <main className="bg-slate-300/20">
         <Router>
           <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />}/>
-            <Route path="/about" element={<About />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
+          <TransitionGroup>
+            <CSSTransition
+              timeout={300}
+              className="fade"
+            >
+              <Routes>
+                <Route path="/" element={<Home isOpen={true} />}/>
+                <Route path="/about" element={<About isOpen={true}/>} />
+                <Route path="/projects" element={<Projects isOpen={true}/>} />
+                <Route path="/contact" element={<Contact isOpen={true}/>} />
+              </Routes>
+
+            </CSSTransition>
+          </TransitionGroup>
+          
         </Router>
      </main>
     </div>

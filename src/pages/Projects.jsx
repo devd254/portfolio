@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Projects = () => {
+const Projects = ({ isOpen }) => {
   return (
     <div>Projects Page</div>
   )

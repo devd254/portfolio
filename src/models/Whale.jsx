@@ -10,9 +10,17 @@ const Whale = () => {
         actions[names[0]].play()
         return () => actions[names[0]]
     }, [actions, names])
+
+    function animate(time) {
+        scene.rotation.z += 0.001;
+        requestAnimationFrame(animate);
+    }
+    requestAnimationFrame(animate);
     return(
         <group ref={ref} dispose={null}>
-            <mesh position={[-10, 20, 1]} scale={[2.3, 2.3, 2.3]}>
+            <mesh position={[-10, 20, 1]}
+                  scale={[2.3, 2.3, 2.3]}
+            >
                 <primitive object={scene} />
             </mesh>
         </group>        
