@@ -8,7 +8,7 @@ const Loader = () => {
         <div className='flex justify-center items-center'>
             <Loader2 
               color='#00FFFF'
-              className='bg-blue-200 w-20 h-20 border-2 border-opacity-50 border-blue-600 border-t-gray-600 rounded-full animate-spin'
+              className='bg-red-200 w-20 h-20 border-2 border-opacity-50 border-blue-600 border-t-gray-600 rounded-full animate-spin'
             />
         </div>
     </Html>

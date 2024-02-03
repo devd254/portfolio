@@ -20,7 +20,7 @@ const Home = () => {
     <section className='w-full h-screen relative'>
         <Canvas 
           className='w-full h-screen bg-transparent'
-          camera={{ position: [-120.0, 100, 100.0], near: 0.1, far: 1000 }}
+          camera={{ position: [-120.0, 30, 120.0], near: 0.1, far: 1000 }}
         >
             <OrbitControls />
             <Suspense fallback={<Loader />}>

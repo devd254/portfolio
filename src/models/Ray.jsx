@@ -12,7 +12,10 @@ const Ray = () => {
     }, [actions, names])
     return(
         <group ref={ref} dispose={null}>
-            <mesh position={[-10, 20, 1]} scale={[2.3, 2.3, 2.3]}>
+            <mesh position={[-20, -50, -100]}
+                  scale={[1.3, 1.3, 1.3]}
+                  rotation={[-5, -4.75, 5]}      
+            >
                 <primitive object={scene} />
             </mesh>
         </group>        
