@@ -11,10 +11,9 @@ const Whale = () => {
         return () => actions[names[0]]
     }, [actions, names])
 
-    const origin = 20;
 
     function animate() {
-        scene.rotation.y += 0.005;
+        scene.rotation.y += 0.002;
         requestAnimationFrame(animate);
     }
     requestAnimationFrame(animate);
