@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useAnimations, useGLTF } from "@react-three/drei";
-import whale from "../assets/animated_whale.glb";
+import whale from "../assets/animated_whale2.glb";
 
 const Whale = () => {
     const { scene, animations } = useGLTF(whale);
@@ -14,11 +14,7 @@ const Whale = () => {
     const origin = 20;
 
     function animate() {
-        console.log(scene.position.x);
-        if(scene.position.x <= -200.1){
-            scene.position.x = origin;
-        }
-        scene.position.x += -0.07;
+        scene.rotation.y += 0.005;
         requestAnimationFrame(animate);
     }
     requestAnimationFrame(animate);
