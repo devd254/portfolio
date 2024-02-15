@@ -19,7 +19,7 @@ import SandScene from '../models/SandScene';
 const Home = ({ isOpen }) => {
 
   return (
-    <section className='w-full h-screen relative'>
+    <section className='bg-sky-300 w-full h-screen relative'>
         <Canvas 
           className='w-full h-screen bg-transparent'
           camera={{ position: [-120.0, 30, 120.0], near: 0.1, far: 1000 }}

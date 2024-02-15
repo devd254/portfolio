@@ -1,8 +1,12 @@
-import React from 'react'
+import React from 'react';
+
+import Bubble from '../models/Bubble';
 
 const About = ({ isOpen }) => {
   return (
-    <div>About Page</div>
+    <section>
+      <Bubble size={[10, 10]} position={[10, 10]}/>
+    </section>
   )
 }
 
