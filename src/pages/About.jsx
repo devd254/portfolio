@@ -4,8 +4,8 @@ import Bubble from '../models/Bubble';
 
 const About = ({ isOpen }) => {
   return (
-    <section>
-      <Bubble size={[10, 10]} position={[10, 10]}/>
+    <section className="h-screen flex bg-gradient-to-b to-yellow-100 from-cyan-100">
+      <Bubble size={[80, 80]} position={[10, 10]}/>
     </section>
   )
 }

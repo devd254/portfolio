@@ -14,7 +14,7 @@ const Whale = () => {
 
     function animate() {
         //NEED TO PREVENT SPEED-UP (keeps increasing to max framrate possible)
-        scene.rotation.y += 0.002;
+        scene.rotation.y += 0.001;
         requestAnimationFrame(animate);
     }
     requestAnimationFrame(animate);
