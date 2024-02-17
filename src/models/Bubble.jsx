@@ -1,13 +1,16 @@
 import React from "react"
+import Portrait from "../models/Portrait"
 
 const Bubble = ({ position, size }) => {
     const [width, height] = size;
     const {x, y} = position;
     return(
-        <div className={`relative w-${width} h-${height} bottom-0 left-0`}
+        <div className={`relative flex w-80 h-80 top-80 left-60`}
         >
-            <div className="bubble"/>
-
+            <div className="bubble">
+                <Portrait />
+            </div>
+                
         </div>
             
     )

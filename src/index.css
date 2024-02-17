@@ -15,6 +15,15 @@
     inset 0 50px 140px #f9f6de, 0 0 90px #fff;
   animation: bubble 4s ease-in-out infinite;
 }
+@keyframes bubble {
+  0%,
+  100% {
+    transform: translateY(800px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+}
 
 :root {
   --blue-rgb: 237 245 255;
