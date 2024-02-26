@@ -5,11 +5,14 @@ const Bubble = ({ position, size }) => {
     const [width, height] = size;
     const {x, y} = position;
     return(
-        <div className={`relative flex w-80 h-80 top-80 left-60`}
+        <div className={`relative flex w-80 h-80 top-60 left-60`}
         >
-            <div className="bubble">
-                <Portrait />
+            <div className="rise">
+                <div className="bubble">
+                    <Portrait />
+                </div> 
             </div>
+            
                 
         </div>
             

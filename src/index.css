@@ -4,6 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
+.prevent-scroll {
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+  position: fixed;
+}
 
 .bubble{
   width: 100%;
@@ -13,14 +19,29 @@
   box-shadow: inset 0 0 20px #fff, inset 10px 0 46px #eaf5fc,
     inset 80px 0 60px #efcde6, inset -20px -60px 100px #ffffff,
     inset 0 50px 140px #f9f6de, 0 0 90px #fff;
-  animation: bubble 4s ease-in-out infinite;
+  animation: bubble-float 4s ease-in-out infinite;
+  animation-delay: 5;
 }
-@keyframes bubble {
-  0%,
-  100% {
-    transform: translateY(800px);
+
+@keyframes bubble-float {
+  100%,
+  0% {
+    transform: translateY(50px);
   }
   50% {
+    transform: translateY(0);
+  }
+}
+.rise{
+  animation: bubble-rise 4s ease-in-out forwards;
+  animation-iteration-count: 1;
+}
+@keyframes bubble-rise {
+  100%,
+  0% {
+    transform: translateY(800px);
+  }
+  100% {
     transform: translateY(0);
   }
 }
