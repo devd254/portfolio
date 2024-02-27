@@ -10,7 +10,35 @@
   width: 100%;
   position: fixed;
 }
-
+/*Make invisible*/
+.invis{
+  animation: invis-img;
+  animation-duration: 6s;
+  animation-iteration-count: 1;
+}
+@keyframes invis-img {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+/*Fade something in*/
+.fade-in{
+  animation: fadein 7s;
+  animation-delay: 6s;
+  animation-iteration-count: 1;
+}
+@keyframes fadein{
+  0%{
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*Portrait bubble*/
 .bubble{
   width: 100%;
   height: 100%;
@@ -24,8 +52,8 @@
 }
 
 @keyframes bubble-float {
-  100%,
-  0% {
+  0%,
+  100% {
     transform: translateY(50px);
   }
   50% {
@@ -33,7 +61,7 @@
   }
 }
 .rise{
-  animation: bubble-rise 4s ease-in-out forwards;
+  animation: bubble-rise 5s ease-in-out forwards;
   animation-iteration-count: 1;
 }
 @keyframes bubble-rise {
@@ -45,7 +73,7 @@
     transform: translateY(0);
   }
 }
-
+/*Other bubbles*/
 :root {
   --blue-rgb: 237 245 255;
   --green-rgb: 125 161 35;
