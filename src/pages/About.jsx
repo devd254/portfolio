@@ -28,7 +28,7 @@ const About = ({ isOpen }) => {
   for (let i = 0; i <= 1000; i += 200) {
       small_bubbles5.push(<SmallBubble x_position={i} delay={delay} />);
   }
-
+  // Random variables: amplitude(side to side), speed rise, size bubble
   return (
     <section className="prevent-scroll h-screen flex bg-gradient-to-b to-yellow-100 from-cyan-300">
       <Bubble />

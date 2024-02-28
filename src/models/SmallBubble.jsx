@@ -8,10 +8,10 @@ const SmallBubble = ({ x_position, delay }) => {
             <div className={`fixed flex w-40 h-40 above-screen`} style={{ left:`${x}px`}}
             >
                 {/* Works when side-float div is removed */}
-                <div className="side-float">
+                {/* <div className="side-float"> */}
                     <div className="bubble-small" style={{ animationDelay: `${d}s` }}>
                     </div>
-                </div>
+                {/* </div> */}
             </div>
         </div>
     )
