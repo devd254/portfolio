@@ -1,12 +1,16 @@
 import React from "react"
 
-const SmallBubble = ({ x_position }) => {
+const SmallBubble = ({ x_position, delay }) => {
     const x = x_position;
+    const d = delay;
     return(
         <div>
-            <div className={`relative flex w-60 h-60 off-up right-10`}
+            <div className={`fixed flex w-40 h-40 above-screen`} style={{ left:`${x}px`}}
             >
-                <div className="bubble-small">
+                {/* Works when side-float div is removed */}
+                <div className="side-float">
+                    <div className="bubble-small" style={{ animationDelay: `${d}s` }}>
+                    </div>
                 </div>
             </div>
         </div>
