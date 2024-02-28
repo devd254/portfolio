@@ -82,21 +82,34 @@
   box-shadow: inset 0 0 10px #fff, inset 5px 0 23px #eaf5fc,
     inset 40px 0 20px #efcde6, inset -10px -30px 50px #ffffff,
     inset 0 25px 70px #f9f6de, 0 0 45px #fff;
-  animation: bubble-swirl 0.5s ease-in-out infinite; /* Changed animation */
+  animation: bubble-small-rise ease-in-out 1;
 }
 
-@keyframes bubble-swirl {
+@keyframes bubble-swirl-left {
   0%, 100% {
-    transform: translateX(0px); /* Translations only along X-axis */
+    transform: translateX(0px);
   }
   50% {
-    transform: translateX(50px); /* Translations only along X-axis */
+    transform: translateX(50px);
   }
 }
 
-.bubble-small-rise {
-  animation: bubble-small-rise 5s ease-in-out; /* Retaining the original animation */
-  animation-iteration-count: 1;
+.bubble-swirl-left {
+  animation: bubble-swirl-left 0.5s ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes bubble-swirl-right {
+  0%, 100% {
+    transform: translateX(50px);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+}
+
+.bubble-swirl-right {
+  animation: bubble-swirl-right 0.5s ease-in-out;
+  animation-iteration-count: infinite;
 }
 
 @keyframes bubble-small-rise {
