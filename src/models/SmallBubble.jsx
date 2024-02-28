@@ -5,7 +5,7 @@ const SmallBubble = ({ x_position, delay }) => {
     const d = delay;
     return(
         <div>
-            <div className={`fixed flex w-40 h-40 above-screen`} style={{ left:`${x}px`}}
+            <div className={`relative flex w-40 h-40 above-screen bubble-small-rise`} style={{ left:`${x}px`}}
             >
                 {/* Works when side-float div is removed */}
                 {/* <div className="side-float"> */}
