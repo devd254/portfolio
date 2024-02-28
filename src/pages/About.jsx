@@ -1,6 +1,7 @@
 import React from 'react';
 import SmallBubble from '../models/SmallBubble';
 import Bubble from '../models/Bubble';
+import AboutText from '../models/AboutText';
 
 const About = ({ isOpen }) => {
   //Bubble rows
@@ -112,6 +113,7 @@ const About = ({ isOpen }) => {
   return (
     <section className="prevent-scroll h-screen flex bg-gradient-to-b to-yellow-100 from-cyan-300">
       <Bubble />
+      <AboutText />
       {small_bubbles1}
       {small_bubbles2}
       {small_bubbles3}
