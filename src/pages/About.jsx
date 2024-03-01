@@ -111,7 +111,7 @@ const About = ({ isOpen }) => {
   
   // Random variables: amplitude(side to side), speed rise, size bubble
   return (
-    <section className="prevent-scroll h-screen flex bg-gradient-to-b to-yellow-100 from-cyan-300">
+    <section className="prevent-scroll h-screen flex bg-gradient-to-b to-blue-200 from-cyan-300">
       <Bubble />
       <AboutText />
       {small_bubbles1}

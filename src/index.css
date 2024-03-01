@@ -128,6 +128,10 @@
 .above-screen{
   top: -1000px;
 }
+/* Nav Buttons */
+.button-shadow{
+  box-shadow: 2px 2px 2px 1px rgba(7, 157, 231, 0.2);
+}
 
 :root {
   --blue-rgb: 237 245 255;
