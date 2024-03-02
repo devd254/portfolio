@@ -2,6 +2,7 @@ import React from 'react';
 import SmallBubble from '../models/SmallBubble';
 import Bubble from '../models/Bubble';
 import AboutText from '../models/AboutText';
+import { Html } from '@react-three/drei';
 
 const About = ({ isOpen }) => {
   //Bubble rows
@@ -111,18 +112,26 @@ const About = ({ isOpen }) => {
   
   // Random variables: amplitude(side to side), speed rise, size bubble
   return (
-    <section className="prevent-scroll h-screen flex bg-gradient-to-b to-blue-200 from-cyan-300">
-      <Bubble />
-      <AboutText />
-      {small_bubbles1}
-      {small_bubbles2}
-      {small_bubbles3}
-      {small_bubbles4}
-      {small_bubbles5}
-      {small_bubbles6}
-      {small_bubbles7}
-      {small_bubbles8}
-    </section>
+    <Canvas
+      className='w-full h-screen bg-transparent'
+      camera={{ position: [-120.0, 30, 120.0], near: 0.1, far: 1000 }}
+    >
+      <Html>
+
+        <section className="prevent-scroll h-screen flex bg-gradient-to-b to-blue-200 from-cyan-300">
+          <Bubble />
+          <AboutText />
+          {small_bubbles1}
+          {small_bubbles2}
+          {small_bubbles3}
+          {small_bubbles4}
+          {small_bubbles5}
+          {small_bubbles6}
+          {small_bubbles7}
+          {small_bubbles8}
+        </section>
+      </Html>
+    </Canvas>
   )
 }
 
