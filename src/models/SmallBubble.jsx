@@ -5,7 +5,7 @@ const SmallBubble = ({ x_position, delay, direction, duration }) => {
     const d = delay;
     const direct = direction;
     const time = duration;
-    console.log(time);
+
     return(
         <div>
             <div className={`fixed flex w-40 h-40 above-screen ${direct}`} style={{ left:`${x}px` }}
