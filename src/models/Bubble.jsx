@@ -5,7 +5,7 @@ const Bubble = () => {
     
     return(
         <div>
-            <div className={`fixed flex w-80 h-80 top-60 left-60`}
+            <div className={`relative flex w-80 h-80 bottom-40 left-[-35rem]`}
             >
                 <div className="rise">
                     <div className="bubble">

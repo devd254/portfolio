@@ -23,7 +23,7 @@ const AboutHTML = () => {
   let minCeiled = Math.ceil(2.0);
   let maxFloored = Math.floor(6.0);
   //Randomize duration(speed)
-  for (let i = -100; i <= 1800; i += 150) {
+  for (let i = -900; i <= 1800; i += 150) {
       choose = numIteration % 2 == 0 ? left : right; 
       numIteration += 1
       small_bubbles1.push(<SmallBubble x_position={i}
@@ -34,7 +34,7 @@ const AboutHTML = () => {
   }
   numIteration = 0;
   delay += 0.1;
-  for (let i = 0; i <= 1900; i += 150) {
+  for (let i = -1000; i <= 1900; i += 150) {
       choose = numIteration % 2 == 0 ? left : right; 
       numIteration += 1
       small_bubbles2.push(<SmallBubble x_position={i}
@@ -45,7 +45,7 @@ const AboutHTML = () => {
   }
   numIteration = 0;
   delay += 0.1;
-  for (let i = -100; i <= 1800; i += 150) {
+  for (let i = -900; i <= 1800; i += 150) {
       choose = numIteration % 2 == 0 ? left : right; 
       numIteration += 1
       small_bubbles3.push(<SmallBubble x_position={i}
@@ -56,7 +56,7 @@ const AboutHTML = () => {
   }
   numIteration = 0;
   delay += 0.1;
-  for (let i = 0; i <= 1900; i += 150) {
+  for (let i = -1000; i <= 1900; i += 150) {
       choose = numIteration % 2 == 0 ? left : right; 
       numIteration += 1
       small_bubbles4.push(<SmallBubble x_position={i}
@@ -67,7 +67,7 @@ const AboutHTML = () => {
   }
   numIteration = 0;
   delay += 0.1;
-  for (let i = -100; i <= 1800; i += 150) {
+  for (let i = -900; i <= 1800; i += 150) {
       choose = numIteration % 2 == 0 ? left : right; 
       numIteration += 1
       small_bubbles5.push(<SmallBubble x_position={i}
@@ -78,7 +78,7 @@ const AboutHTML = () => {
   }
   numIteration = 0;
   delay += 0.1;
-  for (let i = 0; i <= 1800; i += 150) {
+  for (let i = -1000; i <= 1800; i += 150) {
       choose = numIteration % 2 == 0 ? left : right; 
       numIteration += 1
       small_bubbles6.push(<SmallBubble x_position={i}
@@ -89,7 +89,7 @@ const AboutHTML = () => {
   }
   numIteration = 0;
   delay += 0.1;
-  for (let i = -100; i <= 1800; i += 150) {
+  for (let i = -900; i <= 1800; i += 150) {
       choose = numIteration % 2 == 0 ? left : right; 
       numIteration += 1
       small_bubbles7.push(<SmallBubble x_position={i}
@@ -100,7 +100,7 @@ const AboutHTML = () => {
   }
   numIteration = 0;
   delay += 0.1;
-  for (let i = 0; i <= 1800; i += 150) {
+  for (let i = -1000; i <= 1800; i += 150) {
       choose = numIteration % 2 == 0 ? left : right; 
       numIteration += 1
       small_bubbles8.push(<SmallBubble x_position={i}
@@ -112,8 +112,8 @@ const AboutHTML = () => {
   
   // Random variables: amplitude(side to side), speed rise, size bubble
   return (
-    <Html>
-      <section>
+    <Html className='h-full w-full'>
+      <section className='h-full w-full'>
         <Bubble />
         <AboutText />
         {small_bubbles1}

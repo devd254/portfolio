@@ -101,7 +101,7 @@
 
 .bubble-swirl-left {
   animation: bubble-swirl-left 0.5s ease-in-out;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 10;
 }
 @keyframes bubble-swirl-right {
   0%, 100% {
@@ -114,7 +114,7 @@
 
 .bubble-swirl-right {
   animation: bubble-swirl-right 0.5s ease-in-out;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 10;
 }
 
 @keyframes bubble-small-rise {
