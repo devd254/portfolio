@@ -16,12 +16,13 @@ export function Fish(props) {
   const { nodes, materials, animations } = useGLTF(fish);
   const { ref, actions, names } = useAnimations(animations);
   
-//   useEffect(() => {
-//     actions[names[1]].play()
-//     return () => actions[names[1]]
-//   }, [actions, names])
+
+  useEffect(() => {
+    actions[names[0]].play()
+    return () => actions[names[0]]
+  }, [actions, names])
   return (
-    <group ref={group} {...props} dispose={null}>
+    <group ref={ref} {...props} dispose={null}>
       <group name="Sketchfab_Scene">
         <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0]}>
           <group name="root">

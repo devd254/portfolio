@@ -18,7 +18,7 @@ const Ray = () => {
             >
                 <primitive object={scene} />
             </mesh>
-        </group>        
+        </group>
     )
 }
 
