@@ -8,7 +8,7 @@ const About = ({ isOpen }) => {
   return (
     <div className='relative w-full h-screen prevent-scroll flex bg-gradient-to-b to-blue-200 from-cyan-300'>
       <Canvas
-        className='w-full h-full absolute top-0 left-0'
+        className='flex w-full h-full top-0 left-0'
         camera={{ position: [-2.5, 3, 2.5], near: 0.1, far: 1000 }}
       >
         <ambientLight

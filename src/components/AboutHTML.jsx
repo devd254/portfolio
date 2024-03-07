@@ -112,7 +112,7 @@ const AboutHTML = () => {
   
   // Random variables: amplitude(side to side), speed rise, size bubble
   return (
-    <Html className='h-full w-full'>
+    <Html className='absolute h-full w-full'>
       <section className='h-full w-full'>
         <Bubble />
         <AboutText />
