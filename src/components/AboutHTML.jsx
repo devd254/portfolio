@@ -2,6 +2,7 @@ import React from 'react';
 import SmallBubble from '../models/SmallBubble';
 import Bubble from '../models/Bubble';
 import AboutText from './AboutText';
+import BubbleMap from '../models/BubbleMap';
 import { Html } from '@react-three/drei';
 
 const AboutHTML = () => {
@@ -115,7 +116,7 @@ const AboutHTML = () => {
     <Html className='absolute h-full w-full'>
       <section className='h-full w-full'>
         <Bubble />
-        <AboutText />
+        <BubbleMap />
         {small_bubbles1}
         {small_bubbles2}
         {small_bubbles3}
