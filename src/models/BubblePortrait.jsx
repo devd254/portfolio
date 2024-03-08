@@ -1,7 +1,7 @@
 import React from "react"
-import Portrait from "../models/Portrait"
+import Portrait from "./Portrait"
 
-const Bubble = () => {
+const BubblePortrait = () => {
     
     return(
         <div>
@@ -18,4 +18,4 @@ const Bubble = () => {
     )
 }
 
-export default Bubble;
+export default BubblePortrait;

@@ -1,11 +1,9 @@
 import React from 'react';
 import SmallBubble from '../models/SmallBubble';
-import BubblePortrait from '../models/BubblePortrait';
-import AboutText from './AboutText';
-import BubbleMap from '../models/BubbleMap';
+import BubbleLink from '../models/BubbleLink';
 import { Html } from '@react-three/drei';
 
-const AboutHTML = () => {
+const ContactHTML = () => {
   //Bubble rows
   let small_bubbles1 = [];
   let small_bubbles2 = [];
@@ -112,11 +110,31 @@ const AboutHTML = () => {
   }
   
   // Random variables: amplitude(side to side), speed rise, size bubble
+
+  //Different website links
+
+  const Github = () => {
+    return(
+      <button
+      className='rounded-full bg-black h-20 w-20'
+      onClick={() => console.log("https://github.com/devd254")}
+      ></button>
+    )
+  };
+  const LinkedIn = () => {
+    return(
+      <button
+      className='rounded-full bg-black h-20 w-20'
+      onClick={() => console.log("www.linkedin.com/in/devondaniels3")}
+      ></button>
+    )
+  };
+  
   return (
     <Html className='absolute h-full w-full'>
       <section className='h-full w-full'>
-        <BubblePortrait />
-        <BubbleMap />
+        <BubbleLink button={Github}/>
+        <BubbleLink button={LinkedIn}/>
         {small_bubbles1}
         {small_bubbles2}
         {small_bubbles3}
@@ -130,4 +148,4 @@ const AboutHTML = () => {
   )
 }
 
-export default AboutHTML
+export default ContactHTML
