@@ -2,7 +2,7 @@ import React from 'react';
 import { Canvas } from '@react-three/fiber';
 
 import ContactHTML from '../components/ContactHTML';
-import Fish from '../models/Fish';
+import Turtle from '../models/Turtle';
 
 const Contact = ({ isOpen }) => {
   return (
@@ -16,7 +16,7 @@ const Contact = ({ isOpen }) => {
           castShadow
           intensity={Math.PI * 2}
         />
-        <Fish />
+        <Turtle />
         <ContactHTML />
       </Canvas>
     </div>
