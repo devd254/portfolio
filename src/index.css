@@ -108,7 +108,7 @@ span {
 @keyframes bubble-rise {
   100%,
   0% {
-    transform: translateY(800px);
+    transform: translateY(1800px);
   }
   100% {
     transform: translateY(0);

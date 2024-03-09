@@ -61,6 +61,7 @@ const AboutText = () => {
                     <span className="word-fade">my</span>
                     <span className="word-fade">skills</span>
                     <span className="word-fade">through</span>
+                    <span className="word-fade">projects</span>
                     <span className="word-fade">and</span>
                     <span className="word-fade">internships.</span>
                     <span className="word-fade">On</span>

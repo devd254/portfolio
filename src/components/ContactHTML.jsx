@@ -1,6 +1,11 @@
 import React from 'react';
+
 import SmallBubble from '../models/SmallBubble';
 import BubbleLink from '../models/BubbleLink';
+
+import LinkedInIcon from '../assets/linkedIn.png';
+import GithubIcon from '../assets/github.png';
+
 import { Html } from '@react-three/drei';
 
 const ContactHTML = () => {
@@ -115,26 +120,29 @@ const ContactHTML = () => {
 
   const Github = () => {
     return(
-      <button
-      className='rounded-full bg-black h-20 w-20'
-      onClick={() => console.log("https://github.com/devd254")}
-      ></button>
+      <a href="https://github.com/devd254" target="_blank" rel="noopener noreferrer">
+        <button className='relative rounded-full bg-white h-40 w-40'>
+          <img src={GithubIcon} alt="Github Logo" />
+        </button>
+      </a>
     )
   };
   const LinkedIn = () => {
     return(
-      <button
-      className='rounded-full bg-black h-20 w-20'
-      onClick={() => console.log("www.linkedin.com/in/devondaniels3")}
-      ></button>
+      <a href="https://www.linkedin.com/in/devondaniels3" target="_blank" rel="noopener noreferrer">
+      <button className='relative rounded-full bg-blue-500 h-40 w-40'>
+        <img src={LinkedInIcon} alt="LinkedIn Logo" />
+      </button>
+    </a>
     )
   };
-  
+  const linkedin = "LinkedIn";
+  const github = "Github";
   return (
     <Html className='absolute h-full w-full'>
       <section className='h-full w-full'>
-        <BubbleLink button={Github}/>
-        <BubbleLink button={LinkedIn}/>
+        <BubbleLink button={Github} type={github}/>
+        <BubbleLink button={LinkedIn} type={linkedin}/>
         {small_bubbles1}
         {small_bubbles2}
         {small_bubbles3}
