@@ -1,5 +1,5 @@
 import React from 'react';
-
+import BubbleTransition from '../components/BubbleTransition';
 import BubbleLink from '../models/BubbleLink';
 
 import LinkedInIcon from '../assets/linkedIn.png';

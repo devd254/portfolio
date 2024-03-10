@@ -8,28 +8,28 @@ Title: Sea Turtle 2.0
 
 import React, { useEffect } from "react";
 import { useAnimations, useGLTF } from "@react-three/drei";
-import turtle from "../assets/turtle.glb";
+import turtle from "../assets/animated_turtle.glb";
 
 const Turtle = () => {
     const { scene, animations } = useGLTF(turtle);
     const { ref, actions, names } = useAnimations(animations);
-    
-    // useEffect(() => {
-    //     actions[names[2]].play()
-    //     return () => actions[names[2]]
-    // }, [actions, names])
+    console.log(actions);
+    useEffect(() => {
+        actions[names[0]].play()
+        return () => actions[names[0]]
+    }, [actions, names])
 
     function animate() {
         //NEED TO PREVENT SPEED-UP (keeps increasing to max framrate possible)
-        scene.rotation.y += 0.001;
+        scene.rotation.y -= 0.001;
         requestAnimationFrame(animate);
     }
     requestAnimationFrame(animate);
 
     return(
         <group ref={ref} dispose={null}>
-            <mesh position={[-20, -50, -100]}
-                  scale={[1.3, 1.3, 1.3]}
+            <mesh position={[20, -10, -10]}
+                  scale={[0.4, 0.4, 0.4]}
                   rotation={[-5, -4.75, 5]}      
             >
                 <primitive object={scene} />

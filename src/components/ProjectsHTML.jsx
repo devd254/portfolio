@@ -1,12 +1,13 @@
 import React from 'react';
 
+import BubbleTransition from '../components/BubbleTransition';
 import BubbleLink from '../models/BubbleLink';
 
 import GithubIcon from '../assets/github.png';
 
 import { Html } from '@react-three/drei';
 
-const ContactHTML = () => {
+const ProjectsHTML = () => {
   //Different website links
   const Github = () => {
     return(
@@ -39,4 +40,4 @@ const ContactHTML = () => {
   )
 }
 
-export default ContactHTML
+export default ProjectsHTML
