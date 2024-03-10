@@ -13,6 +13,7 @@ import { OrbitControls } from '@react-three/drei';
 import Loader from '../components/Loader';
 import Whale from '../models/Whale';
 import Ray from '../models/Ray';
+import Chest from '../models/Chest';
 import SandScene from '../models/SandScene';
 
 const Home = ({ isOpen }) => {
@@ -33,6 +34,7 @@ const Home = ({ isOpen }) => {
               <SandScene />
               <Ray />
               <Whale />
+              <Chest />
             </Suspense>
         </Canvas>
     </section>
