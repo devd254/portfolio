@@ -14,21 +14,12 @@ const App = () => {
      <main className="bg-slate-300/20">
         <Router>
           <Navbar />
-          <TransitionGroup>
-            <CSSTransition
-              timeout={300}
-              className="fade"
-            >
-              <Routes>
-                <Route path="/" element={<Home isOpen={true} />}/>
-                <Route path="/about" element={<About isOpen={true}/>} />
-                <Route path="/projects" element={<Projects isOpen={true}/>} />
-                <Route path="/contact" element={<Contact isOpen={true}/>} />
-              </Routes>
-
-            </CSSTransition>
-          </TransitionGroup>
-          
+            <Routes>
+              <Route path="/" element={<Home isOpen={true} />}/>
+              <Route path="/about" element={<About isOpen={true}/>} />
+              <Route path="/projects" element={<Projects isOpen={true}/>} />
+              <Route path="/contact" element={<Contact isOpen={true}/>} />
+            </Routes>          
         </Router>
      </main>
     </div>
