@@ -20,12 +20,31 @@ const Whale = () => {
     }, [actions, names])
 
 
-    function animate() {
-        //NEED TO PREVENT SPEED-UP (keeps increasing to max framrate possible)
-        scene.rotation.y += 0.001;
-        requestAnimationFrame(animate);
+    //Set max frame rate(prevents infinite speed up)
+    var fpsInterval, startTime, now, then, elapsed;
+    function startAnimating(fps) {
+        fpsInterval = 1000 / fps;
+        then = Date.now();
+        startTime = then;
+        animate();
     }
-    requestAnimationFrame(animate);
+    
+    function animate() {
+
+        requestAnimationFrame(animate);
+
+        now = Date.now();
+        elapsed = now - then;
+
+        if (elapsed > fpsInterval) {
+
+            then = now - (elapsed % fpsInterval);
+
+            scene.rotation.y += 0.001;
+
+        }
+    }
+    startAnimating(15);
 
     return(
         <group ref={ref} dispose={null}>
