@@ -4,6 +4,7 @@ import BubbleTransition from '../components/BubbleTransition';
 import BubbleLink from '../models/BubbleLink';
 
 import GithubIcon from '../assets/github.png';
+import DiscordIcon from '../assets/discord.png';
 
 import { Html } from '@react-three/drei';
 
@@ -21,8 +22,8 @@ const ProjectsHTML = () => {
   const DiscordClone = () => {
     return(
       <a href="https://discordclone-production-dc61.up.railway.app/" target="_blank" rel="noopener noreferrer">
-      <button className='relative rounded-full bg-indigo-500 h-40 w-40'>
-        <img src={""} alt="Discord-Clone Logo" />
+      <button className='relative rounded-full bg-indigo-200 h-40 w-40'>
+        <img src={DiscordIcon} alt="Discord-Clone Logo" />
       </button>
     </a>
     )
