@@ -11,6 +11,9 @@ import { Suspense } from 'react';
 import { OrbitControls } from '@react-three/drei';
 
 import Loader from '../components/Loader';
+import BubbleTransition from '../components/BubbleTransition';
+import { Html } from '@react-three/drei';
+
 import Whale from '../models/Whale';
 import Ray from '../models/Ray';
 import Chest from '../models/Chest';
@@ -25,6 +28,9 @@ const Home = ({ isOpen }) => {
           camera={{ position: [-120.0, 30, 120.0], near: 0.1, far: 1000 }}
         >
             <OrbitControls />
+            <Html>
+              <BubbleTransition />
+            </Html>
             <Suspense fallback={<Loader />}>
               <ambientLight
                 position={[0.0, 10.0, 0.0]}

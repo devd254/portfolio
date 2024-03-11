@@ -39,7 +39,7 @@ const Shark = () => {
 
             then = now - (elapsed % fpsInterval);
 
-            scene.rotation.y -= 0.001;
+            scene.rotation.y -= 0.009;
 
         }
     }

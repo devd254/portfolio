@@ -34,16 +34,16 @@ const Turtle = () => {
 
         now = Date.now();
         elapsed = now - then;
-
+        
         if (elapsed > fpsInterval) {
 
             then = now - (elapsed % fpsInterval);
 
-            scene.rotation.y -= 0.001;
+            scene.rotation.y -= 0.007;
 
         }
     }
-    startAnimating(15);
+    startAnimating(10);
 
     return(
         <group ref={ref} dispose={null}>
