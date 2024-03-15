@@ -8,7 +8,7 @@ Title: Whale Shark Cute Character
 
 import React, { useEffect } from "react";
 import { useAnimations, useGLTF } from "@react-three/drei";
-import chest from "../assets/animated_chest.glb";
+import chest from "../assets/animated_chest2.glb";
 
 const Chest = () => {
     const { scene, animations } = useGLTF(chest);
@@ -23,9 +23,9 @@ const Chest = () => {
     
     return(
         <group ref={ref} dispose={null}>
-            <mesh position={[-20, 6.6, -100]}
+            <mesh position={[-20, -23, -100]}
                   scale={[1.3, 1.3, 1.3]}
-                  rotation={[-5, -4.75, 5]}      
+                  rotation={[-5, 4.7, 1.2]}      
             >
                 <primitive object={scene} />
             </mesh>

@@ -43,7 +43,7 @@ const Turtle = () => {
 
         }
     }
-    startAnimating(10);
+    startAnimating(30);
 
     return(
         <group ref={ref} dispose={null}>

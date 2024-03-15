@@ -44,7 +44,7 @@ const Whale = () => {
 
         }
     }
-    startAnimating(15);
+    startAnimating(25);
 
     return(
         <group ref={ref} dispose={null}>
