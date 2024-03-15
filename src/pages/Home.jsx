@@ -27,6 +27,7 @@ const Home = ({ isOpen }) => {
           className='w-full h-screen bg-transparent'
           camera={{ position: [-120.0, 30, 120.0], near: 0.1, far: 1000 }}
         >
+            <fog attach="fog" color="lightblue" near={1} far={500} />
             <OrbitControls />
             <Html>
               <BubbleTransition />

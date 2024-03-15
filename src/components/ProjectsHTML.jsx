@@ -12,7 +12,7 @@ const ProjectsHTML = () => {
   //Different website links
   const Github = () => {
     return(
-      <a href="https://github.com/devd254" target="_blank" rel="noopener noreferrer">
+      <a href="https://github.com/devd254?tab=repositories" target="_blank" rel="noopener noreferrer">
         <button className='relative rounded-full bg-white h-40 w-40'>
           <img src={GithubIcon} alt="Github Logo" />
         </button>
