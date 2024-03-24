@@ -4,6 +4,7 @@ import BubbleLink from '../models/BubbleLink';
 
 import LinkedInIcon from '../assets/linkedIn.png';
 import GithubIcon from '../assets/github.png';
+import ContactForm from '../models/ContactForm';
 
 import { Html } from '@react-three/drei';
 
