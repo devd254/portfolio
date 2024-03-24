@@ -43,7 +43,7 @@ const Shark = () => {
 
         }
     }
-    startAnimating(30);
+    startAnimating(20);
 
     return(
         <group ref={ref} dispose={null}>
