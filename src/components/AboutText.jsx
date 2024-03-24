@@ -13,7 +13,7 @@ const AboutText = () => {
     return ( 
         <div className="h-[35rem] w-[35rem]">
             <div className={`absolute opacity-60 map-image h-[25rem] w-[19.4rem] m-5 left-24 top-14`}>
-                <div className="font-caveat relative m-5 leading-8 indent-3">
+                <div className="font-caveat text-[19px] relative ml-2 mr-1 mt-6 leading-8 indent-3">
                            
                     <span className="word-fade">Hello!</span>
                     <span className="word-fade">My</span>
