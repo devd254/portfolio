@@ -36,6 +36,7 @@ const ContactHTML = () => {
         <BubbleLink button={Github} type={github}/>
         <BubbleLink button={LinkedIn} type={linkedin}/>
         <BubbleTransition />
+        <ContactForm />
       </section>
     </Html>
   )
