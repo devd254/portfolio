@@ -6,7 +6,7 @@ const BubbleLink = ({button: SiteLink, type}) => {
         style = `absolute flex w-80 h-60 bottom-10 left-[10rem]`;
     }
     else{
-        style = `absolute flex w-80 h-60 top-10 right-[10rem]`;
+        style = `absolute flex w-80 h-60 top-10 left-[25rem]`;
     }
 
     return(

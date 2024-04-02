@@ -28,16 +28,16 @@ const ContactForm = () => {
 
     return (
         <form className="w-80" ref={form} onSubmit={sendEmail}>
-        <label>Name</label>
-        <input className="w-full" type="text" name="userName" />
-        <label>Email</label>
-        <input className="w-full" type="email" name="userEmail" />
-        <label>Message</label>
-        <textarea className="w-full" name="message" />
-        <button className="bg-green-500 rounded-full w-40"
-        type="submit">
-            Send Email
-        </button>
+            <label>Name</label>
+            <input className="w-full" type="text" name="userName" />
+            <label>Email</label>
+            <input className="w-full" type="email" name="userEmail" />
+            <label>Message</label>
+            <textarea className="w-full h-40" name="message" />
+            <button className="bg-green-500 rounded-full w-40"
+            type="submit">
+                Send Email
+            </button>
         </form>
     );
 }

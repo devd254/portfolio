@@ -21,7 +21,7 @@ const ProjectsHTML = () => {
   };
   const DiscordClone = () => {
     return(
-      <a href="https://discordclone-production-dc61.up.railway.app/" target="_blank" rel="noopener noreferrer">
+      <a href="https://github.com/devd254/discord_clone" target="_blank" rel="noopener noreferrer">
       <button className='relative rounded-full bg-indigo-200 h-40 w-40'>
         <img src={DiscordIcon} alt="Discord-Clone Logo" />
       </button>
