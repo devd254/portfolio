@@ -1,3 +1,7 @@
+/* Gradient Animations
+https://victoryoalli.me/how-to-create-an-animated-gradient-using-tailwin-css
+*/
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
