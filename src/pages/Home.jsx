@@ -25,10 +25,14 @@ const Home = ({ isOpen }) => {
     <section className='bg-gradient-to-b to-blue-200 from-cyan-300 w-full h-screen relative'>
         <Canvas 
           className='w-full h-screen bg-transparent'
-          camera={{ position: [-120.0, 30, 120.0], near: 0.1, far: 1000 }}
+          camera={{ position: [-50.0, 20, 50.0], near: 0.1, far: 1000 }}
         >
             <fog attach="fog" color="lightblue" near={1} far={500} />
-            <OrbitControls />
+            <OrbitControls 
+              enableZoom={false}
+              maxPolarAngle={Math.PI / 2.3}
+              minPolarAngle={Math.PI / 2.3}
+            />
             <Html>
               <BubbleTransition />
             </Html>
