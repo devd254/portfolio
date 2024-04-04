@@ -3,18 +3,18 @@ import React from 'react';
 import BubbleTransition from '../components/BubbleTransition';
 import BubbleLink from '../models/BubbleLink';
 
-import GithubIcon from '../assets/github.png';
+import EmojiIcon from '../assets/emoji.png';
 import DiscordIcon from '../assets/discord.png';
 
 import { Html } from '@react-three/drei';
 
 const ProjectsHTML = () => {
   //Different website links
-  const Github = () => {
+  const Emoji = () => {
     return(
       <a href="https://github.com/devd254?tab=repositories" target="_blank" rel="noopener noreferrer">
         <button className='relative rounded-full bg-white h-40 w-40'>
-          <img src={GithubIcon} alt="Github Logo" />
+          <img src={EmojiIcon} alt="Link to Projects" />
         </button>
       </a>
     )
@@ -29,11 +29,11 @@ const ProjectsHTML = () => {
     )
   };
   const discord_clone = "Discord";
-  const github = "Github";
+  const github = "Github Repositories";
   return (
     <Html className='absolute h-full w-full'>
       <section className='h-full w-full'>
-        <BubbleLink button={Github} type={github}/>
+        <BubbleLink button={Emoji} type={github}/>
         <BubbleLink button={DiscordClone} type={discord_clone}/>
         <BubbleTransition />
       </section>
