@@ -27,7 +27,7 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTH
   width: 100%;
   position: fixed;
 }
-/*Make invisible*/
+/*Make invisible temporarily*/
 .invis{
   animation: invis-img;
   animation-duration: 6s;
@@ -171,14 +171,14 @@ span {
 
 @keyframes bubble-small-rise {
   0% {
-    transform: translateY(3000px);
+    transform: translateY(4000px);
   }
   100% {
     transform: translateY(0);
   }
 }
 .above-screen{
-  top: -1000px;
+  top: -2000px;
 }
 /* Nav Buttons */
 .button-shadow{
