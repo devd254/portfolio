@@ -29,6 +29,13 @@ const ContactForm = () => {
         form.reset(); //Reset form on submission
     };
 
+    const [copyText, setCopyText] = useState("Copy");
+
+    function copyEmail() {
+        navigator.clipboard.writeText("devond156@gmail.com");
+        setCopyText("Copied!");
+    }
+
     return (
         <div className='absolute top-[-15rem] right-40 w-[30rem] h-[30rem]'>
             <form className="w-full h-full" ref={form} onSubmit={sendEmail}>
@@ -41,8 +48,20 @@ const ContactForm = () => {
                 <button className="bg-rose-300 hover:bg-gradient-to-b from-rose-300 to-orange-100 animate-gradient-y rounded-full h-9 w-40 text-gray-700 text-center border-2 border-sky-300"
                 type="submit"
                 disabled={nameValue && emailValue && messageValue ? false : true}>
-                    Send Email
+                    Send Message
                 </button>
+                <div className="pt-5 pl-2">
+                    <div>or via Email:</div>
+                    <div className="flex space-x-2">
+                        <p>devond156@gmail.com</p>
+                        <button 
+                            className="bg-indigo-500 text-white text-sm rounded-full h-7 w-14"
+                            onClick={copyEmail}
+                        >
+                            {copyText}
+                        </button>
+                    </div>
+                </div>
             </form>
         </div>
     );
