@@ -29,11 +29,11 @@ const ProjectsHTML = () => {
     )
   };
   const discord_clone = "Discord";
-  const github = "Github Repositories";
+  const project_repo = "Projects";
   return (
     <Html className='absolute h-full w-full'>
       <section className='h-full w-full'>
-        <BubbleLink button={Emoji} type={github}/>
+        <BubbleLink button={Emoji} type={project_repo}/>
         <BubbleLink button={DiscordClone} type={discord_clone}/>
         <BubbleTransition />
       </section>

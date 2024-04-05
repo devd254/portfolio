@@ -2,10 +2,13 @@ import React from "react"
 
 const BubbleLink = ({button: SiteLink, type}) => {
     let style;
-    if(type.localeCompare("Github") == 0){
+    if(type.localeCompare("Github") == 0){//Github
         style = `absolute flex w-80 h-60 bottom-10 left-[10rem]`;
     }
-    else{
+    else if(type.localeCompare("Projects") == 0){//Projects Repo
+        style = `absolute flex w-80 h-60 bottom-10 right-[10rem]`;
+    }
+    else{//LinkedIn
         style = `absolute flex w-80 h-60 top-10 left-[25rem]`;
     }
 
