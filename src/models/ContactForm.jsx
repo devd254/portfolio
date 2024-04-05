@@ -7,9 +7,14 @@ const ContactForm = () => {
     const apiKey = "QdCqsvUzo-3VpckO9";
 
     const form = useRef();
+
     const [nameValue, changeName] = useState("");
     const [emailValue, changeEmail] = useState("");
     const [messageValue, changeMessage] = useState("");
+    
+    const [sendText, setSendText] = useState("Send Message");
+
+    const [notClickedYet, setClicked] = useState(true);
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -20,13 +25,19 @@ const ContactForm = () => {
         })
         .then(
             () => {
-            console.log('SUCCESS!'); //ADD CODE TO SHOW SUBMISSION
+            console.log('SUCCESS!');
+            setSendText("Message Sent!");
             },
             (error) => {
             console.log('FAILED...', error.text);
             },
         );
-        form.reset(); //Reset form on submission
+        //Reset form on submission
+        form.reset();
+        changeName("");
+        changeEmail("");
+        changeMessage("");
+        setClicked(false);
     };
 
     const [copyText, setCopyText] = useState("Copy");
@@ -47,8 +58,8 @@ const ContactForm = () => {
                 <textarea className="w-full border-2 border-blue-100 h-80 rounded-lg" name="message" value={messageValue} onChange={(e) => changeMessage(e.target.value)}/>
                 <button className="bg-rose-300 hover:bg-gradient-to-b from-rose-300 to-orange-100 animate-gradient-y rounded-full h-9 w-40 text-gray-700 text-center border-2 border-sky-300"
                 type="submit"
-                disabled={nameValue && emailValue && messageValue ? false : true}>
-                    Send Message
+                disabled={notClickedYet && nameValue && emailValue && messageValue ? false : true}>
+                    {sendText}
                 </button>
                 <div className="pt-5 pl-2">
                     <div>or via Email:</div>
