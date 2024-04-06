@@ -18,6 +18,7 @@ import Whale from '../models/Whale';
 import Ray from '../models/Ray';
 import Chest from '../models/Chest';
 import SandScene from '../models/SandScene';
+import Shipwreck from '../models/Shipwreck';
 
 const Home = ({ isOpen }) => {
 
@@ -46,6 +47,7 @@ const Home = ({ isOpen }) => {
               <Ray />
               <Whale />
               <Chest />
+              <Shipwreck />
             </Suspense>
         </Canvas>
     </section>
