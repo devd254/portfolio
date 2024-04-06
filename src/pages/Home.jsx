@@ -20,6 +20,7 @@ import Chest from '../models/Chest';
 import SandScene from '../models/SandScene';
 import Shipwreck from '../models/Shipwreck';
 import Crab from '../models/Crab';
+import Coral1 from '../models/Coral1';
 
 const Home = ({ isOpen }) => {
 
@@ -50,6 +51,7 @@ const Home = ({ isOpen }) => {
               <Chest />
               <Shipwreck />
               <Crab />
+              <Coral1 />
             </Suspense>
         </Canvas>
     </section>
