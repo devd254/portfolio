@@ -22,6 +22,7 @@ import Shipwreck from '../models/Shipwreck';
 import Crab from '../models/Crab';
 import Coral1 from '../models/Coral1';
 import Octopus from '../models/Octopus';
+import Coral2 from '../models/Coral2';
 
 const Home = ({ isOpen }) => {
 
@@ -42,7 +43,12 @@ const Home = ({ isOpen }) => {
             </Html>
             <Suspense fallback={<Loader />}>
               <directionalLight //MAYBE CHANGE LIGHTING TO FIX BLACK OBJECTS
-                position={[0.0, 10.0, 0.0]}
+                position={[-10.0, 10.0, 0.0]}
+                castShadow
+                intensity={Math.PI * 2}
+              />
+              <directionalLight //MAYBE CHANGE LIGHTING TO FIX BLACK OBJECTS
+                position={[10.0, 10.0, 0.0]}
                 castShadow
                 intensity={Math.PI * 2}
               />
@@ -53,6 +59,7 @@ const Home = ({ isOpen }) => {
               <Shipwreck />
               <Crab />
               <Coral1 />
+              <Coral2 />
               <Octopus />
             </Suspense>
         </Canvas>
