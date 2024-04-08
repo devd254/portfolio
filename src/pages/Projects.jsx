@@ -4,7 +4,7 @@ import { Canvas } from '@react-three/fiber';
 import ProjectsHTML from '../components/ProjectsHTML';
 import Shark from '../models/Shark';
 
-const Projects = ({ isOpen }) => {
+const Projects = () => {
   return (
     <div className='relative w-full h-screen prevent-scroll flex bg-gradient-to-b to-blue-200 from-cyan-300'>
       <Canvas

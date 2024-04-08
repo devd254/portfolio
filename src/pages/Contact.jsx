@@ -4,7 +4,7 @@ import { Canvas } from '@react-three/fiber';
 import ContactHTML from '../components/ContactHTML';
 import Turtle from '../models/Turtle';
 
-const Contact = ({ isOpen }) => {
+const Contact = () => {
   return (
     <div className='relative w-full h-screen prevent-scroll flex bg-gradient-to-b to-blue-200 from-cyan-300'>
       <Canvas

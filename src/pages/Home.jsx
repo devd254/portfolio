@@ -24,7 +24,7 @@ import Coral1 from '../models/Coral1';
 import Octopus from '../models/Octopus';
 import Coral2 from '../models/Coral2';
 
-const Home = ({ isOpen }) => {
+const Home = () => {
 
   return (
     <section className='bg-gradient-to-b to-blue-200 from-cyan-300 w-full h-screen relative'>
@@ -42,12 +42,12 @@ const Home = ({ isOpen }) => {
               <BubbleTransition />
             </Html>
             <Suspense fallback={<Loader />}>
-              <directionalLight //MAYBE CHANGE LIGHTING TO FIX BLACK OBJECTS
+              <directionalLight
                 position={[-10.0, 10.0, 0.0]}
                 castShadow
                 intensity={Math.PI * 2}
               />
-              <directionalLight //MAYBE CHANGE LIGHTING TO FIX BLACK OBJECTS
+              <directionalLight
                 position={[10.0, 10.0, 0.0]}
                 castShadow
                 intensity={Math.PI * 2}
