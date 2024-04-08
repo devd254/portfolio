@@ -2,9 +2,9 @@ import React, {useRef, useState} from 'react';
 import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
-    const serviceID = "service_48kv61j";
-    const templateID = "template_gq90qlk";
-    const apiKey = "QdCqsvUzo-3VpckO9";
+    const serviceID = "service_hzgjdjm";
+    const templateID = "template_5ujjpwf";
+    const apiKey = "2PTnSCRarOUnPbTfY";
 
     const form = useRef();
 
@@ -33,17 +33,14 @@ const ContactForm = () => {
             },
         );
         //Reset form on submission
-        form.reset();
-        changeName("");
-        changeEmail("");
-        changeMessage("");
+        e.target.reset()
         setClicked(false);
     };
 
     const [copyText, setCopyText] = useState("Copy");
 
     function copyEmail() {
-        navigator.clipboard.writeText("devond156@gmail.com");
+        navigator.clipboard.writeText("devonbdaniels4@gmail.com");
         setCopyText("Copied!");
     }
 
@@ -65,9 +62,9 @@ const ContactForm = () => {
                     <div className="pt-5 pl-2">
                         <div>or via Email:</div>
                         <div className="flex space-x-2">
-                            <p>devond156@gmail.com</p>
+                            <p>devonbdaniels4@gmail.com</p>
                             <button 
-                                className="bg-indigo-500 text-white text-sm rounded-full h-7 w-14"
+                                className="bg-indigo-500 hover:bg-gradient-to-b from-indigo-500 to-indigo-300 animate-gradient-y text-white text-sm rounded-full h-7 w-14"
                                 onClick={copyEmail}
                             >
                                 {copyText}
