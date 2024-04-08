@@ -40,7 +40,7 @@ const Home = ({ isOpen }) => {
               <BubbleTransition />
             </Html>
             <Suspense fallback={<Loader />}>
-              <ambientLight //MAYBE CHANGE LIGHTING TO FIX BLACK OBJECTS
+              <directionalLight //MAYBE CHANGE LIGHTING TO FIX BLACK OBJECTS
                 position={[0.0, 10.0, 0.0]}
                 castShadow
                 intensity={Math.PI * 2}
