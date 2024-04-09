@@ -11,9 +11,12 @@ const App = () => {
   return (
     <div>
      <main className="bg-slate-300/20">
-        <Router forceRefresh>
+        <Router 
+          forceRefresh
+          basename="portfolio-devon-daniels.vercel.app"
+        >
           <Navbar />
-            <Routes path="/portfolio">
+            <Routes>
               <Route path="/" element={<Home />}/>
               <Route path="/about" element={<About />} />
               <Route path="/projects" element={<Projects />} />
