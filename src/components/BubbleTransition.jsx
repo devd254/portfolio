@@ -21,6 +21,7 @@ const BubbleTransition = () => {
     let choose;
     let minCeiled = Math.ceil(2.0);
     let maxFloored = Math.floor(6.0);
+    let key = 0;
     //Randomize duration(speed)
     for (let i = -2900; i <= 2800; i += 150) {
         choose = numIteration % 2 == 0 ? left : right; 
@@ -29,7 +30,9 @@ const BubbleTransition = () => {
                                         delay={delay} 
                                         direction={choose} 
                                         duration={Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled)}
+                                        key={key}
                             />);
+        key += 1;
     }
     numIteration = 0;
     delay += 0.1;
@@ -40,7 +43,9 @@ const BubbleTransition = () => {
                                         delay={delay} 
                                         direction={choose}
                                         duration={Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled)}
+                                        key={key}
                             />);
+        key += 1;
     }
     numIteration = 0;
     delay += 0.1;
@@ -51,7 +56,9 @@ const BubbleTransition = () => {
                                         delay={delay}
                                         direction={choose}
                                         duration = {Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled)}
+                                        key={key}
                             />);
+        key += 1;
     }
     numIteration = 0;
     delay += 0.1;
@@ -62,7 +69,9 @@ const BubbleTransition = () => {
                                         delay={delay}
                                         direction={choose}
                                         duration = {Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled)}
+                                        key={key}
                             />);
+        key += 1;
     }
     numIteration = 0;
     delay += 0.1;
@@ -73,7 +82,9 @@ const BubbleTransition = () => {
                                         delay={delay}
                                         direction={choose}
                                         duration = {Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled)}
+                                        key={key}
                             />);
+        key += 1;
     }
     numIteration = 0;
     delay += 0.1;
@@ -84,7 +95,9 @@ const BubbleTransition = () => {
                                         delay={delay}
                                         direction={choose}
                                         duration = {Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled)}
+                                        key={key}
                             />);
+        key += 1;
     }
     numIteration = 0;
     delay += 0.1;
@@ -95,7 +108,9 @@ const BubbleTransition = () => {
                                         delay={delay}
                                         direction={choose}
                                         duration = {Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled)}
+                                        key={key}
                             />);
+        key += 1;
     }
     numIteration = 0;
     delay += 0.1;
@@ -106,7 +121,9 @@ const BubbleTransition = () => {
                                         delay={delay}
                                         direction={choose}
                                         duration = {Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled)}
+                                        key={key}
                             />);
+        key += 1;
     }
 
     // Random variables: amplitude(side to side), speed rise, size bubble
