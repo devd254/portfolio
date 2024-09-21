@@ -1,6 +1,5 @@
 import React from 'react';
 
-import BubbleTransition from '../components/BubbleTransition';
 import BubbleLink from '../models/BubbleLink';
 
 import EmojiIcon from '../assets/emoji.png';
@@ -35,7 +34,6 @@ const ProjectsHTML = () => {
       <section className='h-full w-full'>
         <BubbleLink button={Emoji} type={project_repo}/>
         <BubbleLink button={DiscordClone} type={discord_clone}/>
-        <BubbleTransition />
       </section>
     </Html>
   )

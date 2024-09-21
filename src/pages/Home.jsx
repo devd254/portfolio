@@ -4,15 +4,12 @@ https://docs.pmnd.rs/react-three-fiber/getting-started/introduction
 https://github.com/pmndrs/drei
 */
 
-import React from 'react';
+import React, { Suspense, useState, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { Suspense } from 'react';
 
 import { OrbitControls } from '@react-three/drei';
 
 import Loader from '../components/Loader';
-import BubbleTransition from '../components/BubbleTransition';
-import { Html } from '@react-three/drei';
 
 import Whale from '../models/Whale';
 import Ray from '../models/Ray';
@@ -25,6 +22,16 @@ import Octopus from '../models/Octopus';
 import Coral2 from '../models/Coral2';
 
 const Home = () => {
+  const [forceFallback, setForceFallback] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setForceFallback(false);
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
 
   return (
     <section className='bg-gradient-to-b to-blue-200 from-cyan-300 w-full h-screen relative'>
@@ -38,30 +45,35 @@ const Home = () => {
               maxPolarAngle={Math.PI / 2.3}
               minPolarAngle={Math.PI / 2.3}
             />
-            <Html>
-              <BubbleTransition />
-            </Html>
-            <Suspense fallback={<Loader />}>
-              <directionalLight
-                position={[-10.0, 10.0, 0.0]}
-                castShadow
-                intensity={Math.PI * 2}
-              />
-              <directionalLight
-                position={[10.0, 10.0, 0.0]}
-                castShadow
-                intensity={Math.PI * 2}
-              />
-              <SandScene />
-              <Ray />
-              <Whale />
-              <Chest />
-              <Shipwreck />
-              <Crab />
-              <Coral1 />
-              <Coral2 />
-              <Octopus />
-            </Suspense>
+
+            {
+              forceFallback ? (
+                <Loader />
+              ) : (
+                <Suspense fallback={<Loader />}>
+                  <directionalLight
+                    position={[-10.0, 10.0, 0.0]}
+                    castShadow
+                    intensity={Math.PI * 2}
+                  />
+                  <directionalLight
+                    position={[10.0, 10.0, 0.0]}
+                    castShadow
+                    intensity={Math.PI * 2}
+                  />
+                  <SandScene />
+                  <Ray />
+                  <Whale />
+                  <Chest />
+                  <Shipwreck />
+                  <Crab />
+                  <Coral1 />
+                  <Coral2 />
+                  <Octopus />
+                </Suspense>
+              )
+            }
+            
         </Canvas>
     </section>
   )

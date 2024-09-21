@@ -2,7 +2,6 @@ import React from 'react';
 import BubblePortrait from '../models/BubblePortrait';
 import BubbleMap from '../models/BubbleMap';
 import { Html } from '@react-three/drei';
-import BubbleTransition from './BubbleTransition';
 
 const AboutHTML = () => {  
   return (
@@ -10,7 +9,6 @@ const AboutHTML = () => {
       <section className='h-full w-full'>
         <BubblePortrait />
         <BubbleMap />
-        <BubbleTransition />
       </section>
     </Html>
   )

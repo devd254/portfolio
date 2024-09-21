@@ -6,7 +6,7 @@ const AboutText = () => {
         const spans = document.querySelectorAll(".word-fade");
     
         spans.forEach((span, index) => {
-          span.style.animation = `text-fade-in 0.8s ${6.1 + index * 0.1}s forwards cubic-bezier(0.11, 0, 0.5, 0)`;
+          span.style.animation = `text-fade-in 0.4s ${2.3 + index * 0.01}s forwards cubic-bezier(0.11, 0, 0.5, 0)`;
         });
     }, []);
 

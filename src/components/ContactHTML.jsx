@@ -1,5 +1,4 @@
 import React from 'react';
-import BubbleTransition from '../components/BubbleTransition';
 import BubbleLink from '../models/BubbleLink';
 
 import LinkedInIcon from '../assets/linkedIn.png';
@@ -35,7 +34,6 @@ const ContactHTML = () => {
       <section className='h-full w-full'>
         <BubbleLink button={Github} type={github}/>
         <BubbleLink button={LinkedIn} type={linkedin}/>
-        <BubbleTransition />
         <ContactForm />
       </section>
     </Html>
