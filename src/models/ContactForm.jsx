@@ -1,10 +1,12 @@
+import { defineConfig } from 'vite';
+
 import React, {useRef, useState} from 'react';
 import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
-    const serviceID = "service_hzgjdjm";
-    const templateID = "template_5ujjpwf";
-    const apiKey = "2PTnSCRarOUnPbTfY";
+    const serviceID = import.meta.env.VITE_SERVICE_ID;
+    const templateID = import.meta.env.VITE_TEMPLATE_ID;
+    const apiKey = import.meta.env.VITE_API_KEY;
 
     const form = useRef();
 
